@@ -6,9 +6,9 @@ const timeLeft = document.querySelector('#time-left');
 const score = document.querySelector('#score');
 
 let results = 0;
-//let hitPosition;
-//let currentTime = 60;
-//let timerId = null;
+let hitPosition;
+let currentTime = 10;
+let timerId = null;
 
 
 function randomSquare() {
@@ -39,8 +39,19 @@ squares.forEach(square => {
 });
 
 function moveMole() {
- let timeLeft = null;
- timerId = setInterval(randomSquare, 1000)
+ timerId = setInterval(randomSquare, 700)
 }
+
 moveMole()
-//console.log('randomSquare(): ', randomSquare())
+
+function countDown() {
+    currentTime --
+    timeLeft.textContent = currentTime;
+    if(currentTime == 0){
+      clearInterval(countDownTimerId);
+      clearInterval(timerId);
+      alert(`Game over! Your score is : ${results}`);
+    }
+}
+let countDownTimerId = setInterval(countDown, 1000);
+
