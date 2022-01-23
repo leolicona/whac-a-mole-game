@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # whac-a-mole
 Vanilla JavaScript game
 
@@ -18,3 +19,7 @@ View the full tutorial [here]:(https://youtu.be/rJU3tHLgb_c)
 As always, if you get stuck or have any questions, please do comment below and I will be sure to get back to you!
 
 I would love to see what you made so please tag me on twitter on @ania_kubow or mention me on Youtube so I can find it and see.
+=======
+# whac-a-mole-game
+whac-a-mole game build with vanilla JavaScript 
+>>>>>>> 1d2b0460519bd7bfe87e5828a08cc9791687cdca
