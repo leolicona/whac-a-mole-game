@@ -15,30 +15,32 @@ function randomSquare() {
     console.log('Const squares Before', squares);
   squares.forEach(square => {
     square.classList.remove('mole');
-    console.log('squareId:', squares.id);
-  
   } )
     
   let randomSquare = squares [Math.floor(Math.random() * 9)];
   randomSquare.classList.add('mole')
-
-
+  hitPosition = randomSquare.id;
     console.log('Random Position: ', randomSquare);
     console.log('Const squares after', squares);
-    console.log('squareId:', squares.id);
+    console.log('hitPosition', hitPosition);
+    
   
   
 }
 
 squares.forEach(square => {
   square.addEventListener('mousedown', () => {
-    
+    if(square.id == hitPosition){
+      results++
+      score.textContent = results;
+      hitPosition = null;
+    }
   })
 });
 
 function moveMole() {
  let timeLeft = null;
- timerId = setInterval(randomSquare, 500)
+ timerId = setInterval(randomSquare, 1000)
 }
 moveMole()
 //console.log('randomSquare(): ', randomSquare())
