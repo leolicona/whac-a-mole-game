@@ -7,7 +7,7 @@ const score = document.querySelector('#score');
 
 let results = 0;
 let hitPosition;
-let currentTime = 10;
+let currentTime = 60;
 let timerId = null;
 
 
@@ -39,7 +39,7 @@ squares.forEach(square => {
 });
 
 function moveMole() {
- timerId = setInterval(randomSquare, 700)
+ timerId = setInterval(randomSquare, 1000)
 }
 
 moveMole()
